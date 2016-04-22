@@ -1,7 +1,7 @@
-## SFFIRE Framework
+## SF Framework
 Este es mi propio framework de diseño y desarrollo. Es una Single Page App con arquitectura React/ES6 que consume una base de datos JSON por medio de la API de Firebase.
 
-:scream: [DEMO](http://t0t.github.io/sffire)
+:scream: [DEMO](http://t0t.github.io/sf)
 
 ## Diseño Web UI
 - Wireframing y Guías de estilo
