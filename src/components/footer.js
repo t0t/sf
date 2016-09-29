@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { IconCC } from './Icons';
+import { IconLogoSF } from './Icons';
 import Social from './social/Social'
 
 export default class Footer extends Component {
@@ -7,9 +7,8 @@ export default class Footer extends Component {
     return (
       <footer className="Site__footer">
         <Social/>
-        <small>Handcoded with love by </small>
-        <small>Sergio Forés </small>
-        <small><IconCC/></small>
+        <p className="Site__footer__credits">
+        Handcoded with love by Sergio Forés <IconLogoSF /></p>
       </footer>
     )
   }

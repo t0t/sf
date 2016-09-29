@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
+import { IconHeart } from '../Icons'
+import { Link } from 'react-router'
 
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
@@ -24,18 +26,74 @@ export default class Home extends Component {
   }
 
   render() {
-    console.log(this.state.home)
+    console.log(this.state.home);
     let home = this.state.home;
+    var bgHeartUrl = "./assets/icons/bg-heart.svg";
+    var bgHagoUrl = "./assets/icons/bg-hago.svg";
+    var bgMountainUrl = "./assets/icons/bg-mountain.svg";
+    var bgHago = {
+      backgroundImage: 'url(' + bgHagoUrl + ')'
+    };
+    var bgMountain = {
+      backgroundImage: 'url(' + bgMountainUrl + ')'
+    };
+    var bgHeart = {
+      backgroundImage: 'url(' + bgHeartUrl + ')'
+    };
 
     return (
-      <section className="Home">
-        <div className="Site__section__header Site__section__header--home">
-          <h1>{home.title}</h1>
+      <article className="Home">
+
+        <div className="Site__section Site__section--home">
+          <div className="home-img"><IconHeart /></div>
+          <h1 className="home-title">{home.title}</h1>
+          <div className="home-wrap">
+            {(home.p1) ? <p>{home.p1}</p> : null}
+            {(home.boton) ? <button className="btn"><Link to="/todh" activeClassName="active">{home.boton}</Link></button> : null}
+          </div>
+
         </div>
-        {(home.img) ? <img src={home.img}/> : null}
-        {(home.p1) ? <p>{home.p1}</p> : null}
-        {(home.p2) ? <p>{home.p2}</p> : null}
-      </section>
+
+        <div className="Site__section  Site__section--hago"
+        style={bgHago}
+        >
+
+          <h1>
+          {home.title_hago}
+          </h1>
+          <div className="container">
+            {(home.descripcion_hago) ? <p>{home.descripcion_hago}</p> : null}
+          </div>
+          {(home.boton_hago) ? <button className="btn">
+          <Link to="/works" activeClassName="active"> {home.boton_hago} </Link>
+          </button> : null}
+        </div>
+
+        <div className="Site__section  Site__section--pienso"
+        style={bgMountain}
+        >
+          <h1>
+          {home.title_pienso}
+          </h1>
+          <div className="container">
+            {(home.descripcion_pienso) ? <p>{home.descripcion_pienso}</p> : null}
+          </div>
+          {(home.boton_pienso) ? <button className="btn"><Link to="/blog" activeClassName="active"> {home.boton_pienso} </Link></button> : null}
+        </div>
+
+        <div className="Site__section  Site__section--siento"
+        style={bgHago}
+        >
+          <h1>
+            {home.title_siento}
+          </h1>
+          <div className="container">
+            {(home.descripcion_siento) ? <p>{home.descripcion_siento}</p> : null}
+          </div>
+          {(home.boton_siento) ? <button className="btn"><Link to="/services" activeClassName="active"> {home.boton_siento} </Link></button> : null}
+        </div>
+
+      </article>
     )
   }
 }

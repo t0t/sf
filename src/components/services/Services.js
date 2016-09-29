@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
 import ServicesEntry from './ServicesEntry'
-import Skills from '../skills/Skills'
+
+import Historia from '../historia/Historia'
+import Slider from '../slider/Slider'
+import Soy from '../soy/Soy'
 import { IconEmail } from '../Icons'
 
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
@@ -38,11 +41,13 @@ export default class Services extends Component {
 
     return (
       <section className="Site__section Site__section--services">
-        <div className="Site__section__header">
-          <h1>{header}</h1>
+        <Soy />
+        <h2>{header}</h2>
+        <div className="Site__section__wrap">
+          {servicios}
         </div>
-        {servicios}
-        <Skills />
+        <Historia />
+        <Slider />
       </section>
     )
   }

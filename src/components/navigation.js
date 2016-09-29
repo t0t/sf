@@ -18,20 +18,24 @@ export default class MainNav extends Component {
         <button className={ addClass + ' toggle-btn' } onClick={this.handleClick.bind(this)}>
           <IconToggle/>
         </button>
+
         <ul className="Nav-main">
+
           <li className="Nav-main__item">
-            <Link to="/services" activeClassName="active"> Servicios </Link>
+            <Link to="/services" activeClassName="active"> Transmitir </Link>
           </li>
           <li className="Nav-main__item">
-            <Link to="/works" activeClassName="active"> Portafolio </Link>
+            <Link to="/works" activeClassName="active"> Observar </Link>
           </li>
           <li className="Nav-main__item">
-            <Link to="/blog" activeClassName="active"> Blog </Link>
+            <Link to="/blog" activeClassName="active"> Definir </Link>
           </li>
           <li className="Nav-main__item">
-            <Link to="/photos" activeClassName="active"> Slider </Link>
+            <Link to="/todh" activeClassName="active"> Hacer </Link>
           </li>
+
         </ul>
+
       </nav>
     )
   }

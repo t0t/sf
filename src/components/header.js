@@ -4,6 +4,7 @@ var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
 import { IconLogoSF } from './Icons'
 import { Link } from 'react-router'
+import MainNav from './navigation'
 
 export default class Header extends Component {
   constructor(props) {
@@ -37,9 +38,12 @@ export default class Header extends Component {
     this.getPage();
     return (
       <header className="Site__header">
-        <Link to="/" className="Site__logo"><IconLogoSF /></Link>
-        <h1 className="Site__name">{this.state.brand.name}</h1>
-        <h5 className="Site__description">{this.state.brand.title}</h5>
+        <div className="Brand">
+          <Link to="/"><IconLogoSF /></Link>
+          <h1 className="Site__name">{this.state.brand.name}</h1>
+          <h5 className="Site__description">{this.state.brand.title}</h5>
+        </div>
+        <MainNav />
       </header>
     )
   }

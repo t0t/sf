@@ -15,7 +15,7 @@ export default class Slide extends Component {
   render() {
     let addClass = this.state.isActive && 'active'
     return (
-      <figure>
+      <figure className="slider__slide">
         <img
           src={ this.props.url }
           onClick={ this.handleClick.bind(this) }

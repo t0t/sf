@@ -4,12 +4,14 @@ import { hashHistory } from 'react-router'
 import { IndexRoute } from 'react-router'
 
 import App from '../components/App'
+
 import Home from '../components/home/Home'
 import Services from '../components/services/Services'
 import Works from '../components/work/Works'
 import Blog from '../components/blog/Blog'
-import Slider from '../components/slider/Slider'
-import Skills from '../components/skills/Skills'
+import Todh from '../components/todh/Todh'
+import Historia from '../components/historia/Historia'
+import Contacto from '../components/contacto/Contacto'
 
 // <Router history={browserHistory}>
 export default (
@@ -17,7 +19,7 @@ export default (
     <Route path="services" component={Services} />
     <Route path="works" component={Works} />
     <Route path="blog" component={Blog} />
-    <Route path="photos" component={Slider} />
+    <Route path="todh" component={Todh} />
     <IndexRoute component={Home} />
   </Route>
 )

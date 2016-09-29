@@ -12,6 +12,24 @@ export class IconLoader extends Component {
  }
 }
 
+// Icon Heart
+export class IconHeart extends Component {
+ render() {
+  return (
+    <svg className="icon-heart" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 180 180" aria-labelledby="title">
+      <title id="title">Heart Icon</title>
+        <path d="M141.254935,98.2011723 C93.1946772,100.166706 125.368781,165.735509 142.288103,157.327677" id="Shape"></path>
+        <path d="M141.133267,98.1528732 C141.133267,118.121474 136.313256,137.695035 142.658002,157.663636 C90.8425774,184.98909 45.3718989,125.083287 9.4183392,94.6048969" id="Shape"></path>
+        <path d="M10.2807747,95.1705731 C-7.6960052,78.3549093 -0.987377861,34.8206957 22.2766902,22.2089479 C33.9087242,19.056011 41.0855254,24.1291986 52.7175595,24.1291986 C52.7175595,24.1291986 56.8526503,59.7697648 66.1533319,64.6473296" id="Shape"></path>
+        <path d="M141.600544,97.4144446 C153.232578,48.0184323 96.1298656,-43.4167393 51.7166448,23.8459157" id="Shape"></path>
+        <path d="M141.318661,98.0107927 C112.767305,90.6539398 93.5428811,76.1237642 66.0489825,64.5629954" id="Shape"></path>
+        <path d="M65.4508761,64.3195502 C53.8188421,87.4410878 27.3951191,79.8911912 9.4183392,95.6558759" id="Shape"></path>
+
+    </svg>
+  )
+ }
+}
+
 // Icon Toggle
 export class IconToggle extends Component {
  render() {
@@ -58,8 +76,9 @@ export class IconLogo extends Component {
 export class IconLogoSF extends Component {
  render() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-    <path d="M6.438 3.4h3.22v3.4h-3.22V3.4zm-3.22 10.2v-3.4h3.198V6.8H3.22V0H0v17h9.657v-3.4H3.22z"/>
+    <svg className="icon-logo-sf" width="58" height="58" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="28" cy="28" r="28"/>
+    <path d="M23.127 18.932c3.648-1.167 2.66-4.932 0-4.932-2.61 0-3.063 3.986.025 4.942 0 3.03-.025 14.08-.025 14.08h7.79-7.79V45H38"/>
     </svg>
   )
  }

@@ -1,5 +1,4 @@
 .icon-logo {
-  stroke: $color-black;
   fill: none;
   // width: 49px;
 }
@@ -23,9 +22,24 @@
   width: 49px;
   height: 49px;
 }
+
 .icon-logo-sf {
-  fill: $color-black;
+  max-width: 50px;
+  // width: 50px;
+  // height: 50px;
+  // padding-top: 25px;
+  // padding-left: 25px;
+  circle {
+    fill: $color-white;
+    stroke-width: 0px;
+  }
+  path {
+    stroke: $color-black;
+    fill: none;
+    stroke-width: 1px;
+  }
 }
+
 .icon-email {
   fill: $color-base;
   width: 40px;
@@ -35,4 +49,27 @@
   fill: $color-alt;
   width: 50px;
   height: 12px;
+}
+.icon-heart {
+  fill: none;
+  width: 150px;
+  height: 150px;
+  stroke: $color-black;
+  stroke-width: 8px;
+  path {
+  }
+}
+
+.icon-arrow-left {
+  path {
+    stroke: $color-black;
+    stroke-width: 1px;
+  }
+}
+
+.icon-arrow-right {
+  path {
+    stroke: $color-black;
+    stroke-width: 1px;
+  }
 }

@@ -1,0 +1,18 @@
+.Posts {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__list {
+    list-style: none;
+    padding: $base_spacing;
+    flex: 1 375px;
+    background-color: $color-base;
+  }
+
+  &__list__item {
+    // flex: 0 375px;
+  }
+
+
+}

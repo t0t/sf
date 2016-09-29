@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
 import SocialLinks from './SocialLinks'
+import Contacto from '../contacto/Contacto'
 
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/')
 
@@ -29,14 +30,10 @@ export default class Social extends Component {
       return <SocialLinks {...data} />
     });
     return (
-      <div>
-        <h3>¿Hablamos?</h3>
-        <form action="https://formspree.io/sergiofores@gmail.com" method="POST">
-          <input type="text" name="name"/>
-          <input type="email" name="_replyto"/>
-          <input type="submit" value="Send"/>
-        </form>
-        <ul className="Social">
+      <div className="Social">
+        <h3 className="Social__title">¿Hablamos?</h3>
+        <Contacto/>
+        <ul className="Social__links">
           {socialLinks}
         </ul>
       </div>

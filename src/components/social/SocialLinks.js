@@ -5,7 +5,7 @@ export default class SocialLinks extends Component {
   render() {
     return (
       <li className="Social__item">
-        <a href={this.props.url}>
+        <a href={this.props.url} target="_blank">
           {this.props.title}
         </a>
       </li>

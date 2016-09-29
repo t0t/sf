@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Slide from './Slide'
 import Rebase from 're-base'
 
+import { IconArrowLeft } from '../Icons'
+import { IconArrowRight } from '../Icons'
+
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
 export default class Slider extends Component {
@@ -50,11 +53,11 @@ export default class Slider extends Component {
     })
     let slide = slides[this.state.slide]
     return (
-      <section>
+      <div className="slider">
+        <button onClick={this.handlePrevSlide.bind(this)}> <IconArrowLeft /> </button>
         {slide}
-        <button onClick={this.handlePrevSlide.bind(this)}> PREV </button>
-        <button onClick={this.handleNextSlide.bind(this)}> NEXT </button>
-      </section>
+        <button onClick={this.handleNextSlide.bind(this)}> <IconArrowRight /> </button>
+      </div>
     );
   }
 }
